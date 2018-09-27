@@ -19,10 +19,10 @@ void Block::MineBlock(uint32_t nDifficulty)
 
   do {
     _nNonce++;
-    _sHash = _CalculateHash();
-  } while (_sHash.substr(0, nDifficulty) != str);
+    sHash = _CalculateHash();
+  } while (sHash.substr(0, nDifficulty) != str);
 
-  cout << "Block mined: " << _sHash << endl;
+  cout << "Block mined: " << sHash << endl;
 }
 
 inline string Block::_CalculateHash() const
