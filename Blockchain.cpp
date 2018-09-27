@@ -12,3 +12,8 @@ void Blockchain::AddBlock(Block bNew)
   bNew.MineBlock(_nDifficulty);
   _vChain.push_back(bNew);
 }
+
+Block Blockchain::_GetLastBlock() const
+{
+  return _vChain.back();
+}
